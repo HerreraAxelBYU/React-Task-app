@@ -7,12 +7,10 @@ export function TaskContextProvider(props) {
   const [tasks, setTasks] = useState([]);
 
   function createTask(task) {
-    setTasks([
-      ...tasks,
+    setTasks([...tasks,
       {
         title: task.title,
         id: tasks.length,
-        description: task.description,
       },
     ]);
   }
